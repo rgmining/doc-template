@@ -1,5 +1,7 @@
 # Sphinx template
 A sphinx template for documentation of the review graph mining project.
+This template modifies [Read the Docs Sphinx Theme](https://github.com/snide/sphinx_rtd_theme)
+and thereby you must use that theme.
 
 ## Configuration
 This template takes the following parameters through `html_context` dictionary in `conf.py`:
