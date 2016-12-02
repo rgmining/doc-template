@@ -12,7 +12,7 @@
 <meta property="og:type" content="article"/>
 <meta property="og:title" content="{{ title|striptags|e }}{{ titlesuffix }}"/>
 <meta property="og:image" content="{{ base_url }}_static/image.png" />
-<meta property="og:url" content="{{ base_url }}" />
+<meta property="og:url" content="{{ base_url }}{{pagename+file_suffix}}" />
 <meta property="og:site_name" content="{{ shorttitle }}"/>
 
 {% if meta is defined and "description" in meta %}
@@ -21,11 +21,13 @@
 <meta property="og:description" content="{{ title }}" />
 {% endif %}
 
+{% if twitter is defined %}
 <meta name="twitter:site" content="{{ twitter }}" />
-{% if meta is defined and "description" in meta %}
-<meta name="twitter:card" content="{{ meta['description'] }}" />
-{% else %}
-<meta name="twitter:card" content="{{ title }}" />
+  {% if meta is defined and "description" in meta %}
+  <meta name="twitter:card" content="{{ meta['description'] }}" />
+  {% else %}
+  <meta name="twitter:card" content="{{ title }}" />
+  {% endif %}
 {% endif %}
 
 <script src="https://use.fontawesome.com/f179dac0e7.js" async></script>
