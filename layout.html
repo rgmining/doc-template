@@ -56,8 +56,10 @@
 
 
 {% block menu %}
+{% if root is defined and root %}
 {{ super() }}
-{% if root is not defined %}
+{% else %}
+<div class="local-toc">{{ toc }}</div>
 <hr/>
 <a href="https://rgmining.github.io/">Review Graph Mining</a>
 {% endif %}
