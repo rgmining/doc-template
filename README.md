@@ -11,4 +11,5 @@ This template takes the following parameters through `html_context` dictionary i
 - google_analytics: Google analytics's ID,
 - google_adsense: Google adsense's ID,
 - google_adsense_slot: Google adsense's slot number,
-- addthis: Addthis's ID.
+- addthis: Addthis's ID,
+- root: if set True, hide a link to the top page.
